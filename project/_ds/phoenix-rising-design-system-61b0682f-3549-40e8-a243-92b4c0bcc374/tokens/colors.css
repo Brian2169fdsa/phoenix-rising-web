@@ -1,0 +1,58 @@
+/* ============================================================
+   Phoenix Rising — Color Tokens
+   Source of truth: sampled directly from the logo.
+   Do not re-interpret these hex values.
+   ============================================================ */
+
+:root {
+  /* --- Brand: Phoenix Blue (the workhorse) --- */
+  --phoenix-blue: #1457A6;        /* Primary: links, primary buttons, key accents */
+  --phoenix-blue-deep: #0F4684;   /* Hover / pressed primary, deep accents */
+
+  /* --- Ink & neutral text --- */
+  --slate-ink: #18242F;           /* Headlines, primary text, dark sections/footer */
+  --cool-gray: #6C6F78;           /* Secondary text, captions, labels */
+
+  /* --- Chrome / glass (depth + premium feel) --- */
+  --chrome-100: #E6F0FA;          /* Chrome / glass highlight */
+  --chrome-300: #C0C8D2;          /* Chrome mid (hairlines, borders) */
+  --chrome-500: #9AA4B0;          /* Chrome shadow / metallic edge */
+  --sky-glass: #C8E2F8;           /* Soft reflective panels, tinted glass surfaces */
+
+  /* --- Accent (use sparingly: thin rules, micro-detail; never a fill) --- */
+  --ember: #C45A1E;
+
+  /* --- Surfaces --- */
+  --bone: #FBFCFE;                /* Page background */
+  --white: #FFFFFF;               /* Cards, pure surfaces */
+
+  /* --- Semantic --- */
+  --success: #1E8E5A;
+  --warning: #C45A1E;             /* reuse ember */
+  --error: #C0392B;
+  --info: #1457A6;
+
+  /* --- Semantic aliases (use these in components) --- */
+  --color-bg: var(--bone);
+  --color-surface: var(--white);
+  --color-surface-glass: var(--sky-glass);
+  --color-text: var(--slate-ink);
+  --color-text-secondary: var(--cool-gray);
+  --color-text-inverse: var(--white);
+  --color-primary: var(--phoenix-blue);
+  --color-primary-hover: var(--phoenix-blue-deep);
+  --color-on-primary: var(--white);
+  --color-border: var(--chrome-300);
+  --color-border-strong: var(--chrome-500);
+  --color-hairline: var(--chrome-300);
+  --color-accent: var(--ember);
+  --color-focus-ring: rgba(20, 87, 166, 0.35);
+
+  /* --- Signature gradients --- */
+  /* Metallic chrome: frames, dividers, depth — this is what reads "premium" */
+  --chrome-gradient: linear-gradient(135deg, #E6F0FA 0%, #C0C8D2 55%, #9AA4B0 100%); /* @kind color */
+  /* Tinted glass panels */
+  --glass-gradient: linear-gradient(160deg, rgba(200, 226, 248, 0.6), rgba(20, 87, 166, 0.08)); /* @kind color */
+  /* Subtle light-streak / glint sheen */
+  --glint-sheen: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.55) 48%, rgba(255, 255, 255, 0) 60%); /* @kind color */
+}

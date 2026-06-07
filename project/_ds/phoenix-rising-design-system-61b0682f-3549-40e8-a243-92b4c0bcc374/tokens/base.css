@@ -1,0 +1,104 @@
+/* ============================================================
+   Phoenix Rising — Base element styles & helpers
+   Cool, clean, architectural defaults built on the tokens.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--bone);
+  color: var(--slate-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+}
+
+/* --- Headings: condensed, all-caps, architectural --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--slate-ink);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-heading);
+  margin: 0;
+  font-weight: var(--weight-extrabold);
+}
+
+/* Display / hero treatment — all-caps, condensed, tight */
+.display,
+.eyebrow-title {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+/* Two-tone headline: lead word slate-ink, emphasis word phoenix-blue. */
+.headline-accent { color: var(--phoenix-blue); }
+/* Short ember rule beneath a headline (the brand's signature underline). */
+.headline-rule { border: 0; height: 2px; width: 48px; background: var(--ember); margin-top: 18px; }
+
+/* --- Eyebrow / section label: small-caps, widely tracked --- */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--cool-gray);
+}
+
+/* A thin chrome rule that often pairs with eyebrows */
+.rule-chrome {
+  border: 0;
+  height: 1px;
+  background: var(--chrome-300);
+}
+.rule-ember {
+  border: 0;
+  height: 1px;
+  background: var(--ember);
+}
+
+a {
+  color: var(--phoenix-blue);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--phoenix-blue-deep);
+}
+
+/* --- Signature glint sweep (decorative) --- */
+.glint {
+  position: relative;
+  overflow: hidden;
+}
+.glint::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glint-sheen);
+  background-size: 220% 100%;
+  background-position: 150% 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .glint.glint--animate::after {
+    animation: glint-sweep 4.5s ease-in-out infinite;
+  }
+}
+@keyframes glint-sweep {
+  0%, 100% { background-position: 150% 0; }
+  45%, 55% { background-position: -50% 0; }
+}

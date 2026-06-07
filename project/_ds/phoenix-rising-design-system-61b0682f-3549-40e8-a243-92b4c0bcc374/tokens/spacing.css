@@ -1,0 +1,44 @@
+/* ============================================================
+   Phoenix Rising — Spacing, Radius, Elevation Tokens
+   ============================================================ */
+
+:root {
+  /* --- Spacing scale (px) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* --- Radius (restrained, architectural — no pill-everything) --- */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-pill: 999px;   /* reserved: only for genuine pills (filter chips, toggles) */
+
+  /* --- Elevation: soft, cool-toned shadows --- */
+  --shadow-sm: 0 2px 8px rgba(24, 36, 47, 0.06);
+  --shadow-md: 0 8px 30px rgba(24, 36, 47, 0.10);
+  --shadow-lg: 0 18px 50px rgba(24, 36, 47, 0.14);
+
+  /* --- Signature chrome/glass edge highlight on key panels --- */
+  /* 1px inner top highlight over a faint chrome border */
+  --edge-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.6); /* @kind shadow */
+  --panel-elevation: var(--shadow-md), var(--edge-highlight);
+
+  /* --- Hairlines --- */
+  --hairline: 1px solid var(--chrome-300);
+
+  /* --- Focus ring --- */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+
+  /* --- Layout --- */
+  --container-max: 1200px;
+  --container-pad: var(--space-5);
+  --grid-columns: 12; /* @kind other */
+}
